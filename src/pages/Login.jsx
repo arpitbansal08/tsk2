@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [errors, setError] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,9 +19,13 @@ const Login = () => {
 
     if (!password || !passwordRegex.test(password)) {
       error.password =
-        'Password must not contain any special characters except @ and must be at least 8 characters long.';
+        "Password must not contain any special characters except @ and must be at least 8 characters long.";
     }
     setError(error);
+
+    if (password === "ZenTradesTest@123") {
+      navigate("/dashboard");
+    }
   };
 
   return (
@@ -101,7 +107,8 @@ const Login = () => {
           </form>
           <div className="m-4 p-4">
             <a
-              href="#"
+              href="mailto:support@zentrades.pro"
+              target="_blank"
               className="font-semibold leading-6 text-white hover:text-indigo-500"
             >
               Forgot Your Password?
