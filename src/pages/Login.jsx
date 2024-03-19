@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
   const [errors, setError] = useState({});
+  const [isLogged, setIsLogged] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -24,7 +26,10 @@ const Login = () => {
     setError(error);
 
     if (password === "ZenTradesTest@123") {
-      navigate("/dashboard");
+      // navigate("/dashboard");
+      // <Link></Link>
+      // setIsLogged(true);
+      window.location.href = "https://arpitbansal08.github.io/tsk2/#/dashboard";
     }
   };
 
