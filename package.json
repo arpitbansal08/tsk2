@@ -1,7 +1,7 @@
 {
   "homepage": "https://arpitbansal08.github.io/tsk2/",
   "name": "tsk2",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
