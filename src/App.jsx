@@ -5,6 +5,7 @@ import "./App.css";
 function App() {
   return (
     <HashRouter>
+    
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
