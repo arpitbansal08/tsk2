@@ -26,8 +26,8 @@ const Login = () => {
     setError(error);
 
     if (password === "ZenTradesTest@123") {
-      // navigate("/dashboard");
-      window.location.href = "https://arpitbansal08.github.io/tsk2/#/dashboard";
+      navigate("/dashboard");
+      // window.location.href = "https://arpitbansal08.github.io/tsk2/#/dashboard";
     }
   };
 
